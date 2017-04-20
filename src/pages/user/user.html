@@ -21,5 +21,5 @@
 
       </ion-item>
   </ion-list>
-  <button ion-button (click)="sortList(sortFlag)">sort<span *ngIf="sortFlag">正序</span><span *ngIf="!sortFlag">倒序</span></button>
+  <button ion-button (click)="sortList(sortFlag)">sort<ion-icon *ngIf="sortFlag"  name="md-arrow-round-up"></ion-icon><ion-icon *ngIf="!sortFlag" name="md-arrow-round-down"></ion-icon></button>
 </ion-content>
