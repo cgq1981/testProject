@@ -15,7 +15,11 @@
 
 <ion-content padding>
   <ion-list *ngFor="let user of userList">
-    <ion-item>{{user.username}},{{user.age}}</ion-item>
+    <ion-item>
+      <h3>{{user.username}}</h3>
+      <h5>{{user.age}}</h5>
+
+      </ion-item>
   </ion-list>
   <button ion-button (click)="sortList(sortFlag)">sort<span *ngIf="sortFlag">正序</span><span *ngIf="!sortFlag">倒序</span></button>
 </ion-content>
