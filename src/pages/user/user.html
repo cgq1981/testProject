@@ -8,6 +8,11 @@
 
   <ion-navbar>
     <ion-title>user</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="presentPopover($event)">
+        <ion-icon name="more" style="font-size:2.5rem!important;"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -18,7 +23,8 @@
     <ion-item>
       <h3>{{user.username}}</h3>
       <h5>{{user.age}}</h5>
-
+      <button ion-button color="primary" outline clear (click)="presentUserEditModal(user)">编辑</button>
+      <button ion-button color="danger" outline clear (click)="delete(user)">删除</button>
       </ion-item>
   </ion-list>
   <button ion-button (click)="sortList(sortFlag)">sort<ion-icon *ngIf="sortFlag"  name="md-arrow-round-up"></ion-icon><ion-icon *ngIf="!sortFlag" name="md-arrow-round-down"></ion-icon></button>
